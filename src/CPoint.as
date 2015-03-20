@@ -2,7 +2,7 @@ package
 {
 	/**
 	 * ...
-	 * @author Alice Sparkuhl
+	 * @author Alice Sparkuhl / Cedric Schneider
 	 */
 	public class CPoint extends Object
 	{

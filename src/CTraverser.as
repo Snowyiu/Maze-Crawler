@@ -3,7 +3,7 @@ package
 	import flash.geom.Point;
 	/**
 	 * ...
-	 * @author Alice Sparkuhl
+	 * @author Alice Sparkuhl / Cedric Schneider
 	 */
 	public class CTraverser 
 	{

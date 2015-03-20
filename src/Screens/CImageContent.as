@@ -3,7 +3,7 @@ package Screens
 	import flash.display.BitmapData;
 	/**
 	 * ...
-	 * @author Alice Sparkuhl
+	 * @author Alice Sparkuhl / Cedric Schneider
 	 */
 	public class CImageContent extends CScreenContent
 	{

@@ -3,7 +3,7 @@ package
 	import flash.globalization.DateTimeFormatter;
 	/**
 	 * ...
-	 * @author Alice Sparkuhl
+	 * @author Alice Sparkuhl / Cedric Schneider
 	 */
 	public class CIncrementalPointsTraverser 
 	{

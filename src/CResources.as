@@ -6,7 +6,7 @@ package
 	import flash.geom.Matrix;
 	/**
 	 * ...
-	 * @author Alice Sparkuhl
+	 * @author Alice Sparkuhl / Cedric Schneider
 	 */
 	public class CResources 
 	{

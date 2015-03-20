@@ -6,7 +6,7 @@ package Screens
 	import flash.ui.Keyboard;
 	/**
 	 * ...
-	 * @author Alice Sparkuhl
+	 * @author Alice Sparkuhl / Cedric Schneider
 	 */
 	public class CLevelContent extends CScreenContent
 	{

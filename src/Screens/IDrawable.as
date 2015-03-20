@@ -4,7 +4,7 @@ package Screens
 	
 	/**
 	 * ...
-	 * @author Alice Sparkuhl
+	 * @author Alice Sparkuhl / Cedric Schneider
 	 */
 	public interface IDrawable 
 	{

@@ -7,7 +7,7 @@ package Screens
 	import flash.geom.Rectangle;
 	/**
 	 * ...
-	 * @author Alice Sparkuhl
+	 * @author Alice Sparkuhl / Cedric Schneider
 	 */
 	public class CScreenContent extends Bitmap
 	{

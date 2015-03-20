@@ -4,7 +4,7 @@ package Screens
 	import Screens.CScreenContent;
 	/**
 	 * ...
-	 * @author Alice Sparkuhl
+	 * @author Alice Sparkuhl / Cedric Schneider
 	 */
 	public class CScreen extends Sprite
 	{

@@ -2,7 +2,7 @@ package Screens
 {
 	/**
 	 * ...
-	 * @author Alice Sparkuhl
+	 * @author Alice Sparkuhl / Cedric Schneider
 	 */
 	public class CGameScreen extends CScreen
 	{

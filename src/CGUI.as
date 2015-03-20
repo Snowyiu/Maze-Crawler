@@ -9,7 +9,7 @@ package
 	import Screens.IDrawable;
 	/**
 	 * ...
-	 * @author Alice Sparkuhl
+	 * @author Alice Sparkuhl / Cedric Schneider
 	 */
 	public class CGUI implements IDrawable
 	{

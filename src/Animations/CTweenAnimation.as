@@ -3,7 +3,7 @@ package Animations
 	import fl.transitions.Tween;
 	/**
 	 * ...
-	 * @author Alice Sparkuhl
+	 * @author Alice Sparkuhl / Cedric Schneider
 	 */
 	public class CTweenAnimation implements IAnimation
 	{

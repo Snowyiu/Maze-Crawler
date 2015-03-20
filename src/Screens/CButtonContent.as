@@ -11,7 +11,7 @@ package Screens
 	import flash.text.TextFormat;
 	/**
 	 * ...
-	 * @author Alice Sparkuhl
+	 * @author Alice Sparkuhl / Cedric Schneider
 	 */
 	public class CButtonContent extends CScreenContent
 	{

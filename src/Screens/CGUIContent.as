@@ -3,7 +3,7 @@ package Screens
 	import Entities.CPlayer;
 	/**
 	 * ...
-	 * @author Alice Sparkuhl
+	 * @author Alice Sparkuhl / Cedric Schneider
 	 */
 	public class CGUIContent extends CScreenContent
 	{

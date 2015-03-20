@@ -6,7 +6,7 @@ package Screens
 	import flash.events.MouseEvent;
 	/**
 	 * ...
-	 * @author Alice Sparkuhl
+	 * @author Alice Sparkuhl / Cedric Schneider
 	 */
 	public class CMainMenuScreen extends CScreen
 	{

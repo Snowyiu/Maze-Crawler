@@ -9,7 +9,7 @@ package Entities
 	import flash.display.BitmapData;
 	/**
 	 * ...
-	 * @author Alice Sparkuhl
+	 * @author Alice Sparkuhl / Cedric Schneider
 	 */
 	public class CEntity
 	{

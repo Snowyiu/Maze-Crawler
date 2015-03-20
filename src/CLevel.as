@@ -18,7 +18,7 @@ package
 	import Tiles.ITile;
 	/**
 	 * ...
-	 * @author Alice Sparkuhl
+	 * @author Alice Sparkuhl / Cedric Schneider
 	 */
 	public class CLevel implements IDrawable
 	{
