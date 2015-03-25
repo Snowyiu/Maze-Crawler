@@ -26,10 +26,12 @@ package Entities
 			
 			if (m_p_level.DistanceToPlayer(m_x, m_y) < 5 || m_p_level.HasLineOfSight(this, m_p_level.GetPlayer()))
 			{
+				_m_current_path_pos = 1; // fixes worms teleporting
 				_m_p_current_path = m_p_level.GetPath(new CPoint(m_x, m_y), m_p_level.GetPlayerPos());
 				if (_m_p_current_path.length > 2)
 				{
 					_m_attacking = false;
+					
 					MoveTo(_m_p_current_path[1].X - m_x, _m_p_current_path[1].Y - m_y);
 				}
 				else
