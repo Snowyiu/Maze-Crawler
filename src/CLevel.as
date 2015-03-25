@@ -411,10 +411,10 @@ package
 			if (p_entity1.m_y != p_entity2.m_y)
 			{
 				var result:Boolean = true;
-				var dy:int = p_entity1.m_y - p_entity2.m_y;
-				if (dy > 0)
+				var dy:uint = Math.abs(p_entity1.m_y - p_entity2.m_y);
+				if (p_entity1.m_y > p_entity2.m_y)
 				{
-					for ( var i:uint = 1; i < dy; i++)
+					for ( var i:uint = 1; i < dy; ++i)
 					{
 						if ( _m_p_grid[p_entity2.m_x][p_entity2.m_y + i].Walkable != true)
 						{
@@ -424,7 +424,7 @@ package
 				}
 				else
 				{
-					for ( var i:uint = 1; i < dy; i++)
+					for ( var i:uint = 1; i < dy; ++i)
 					{
 						if ( _m_p_grid[p_entity1.m_x][p_entity1.m_y + i].Walkable != true)
 						{
@@ -436,10 +436,10 @@ package
 			else if (p_entity1.m_x != p_entity2.m_x)
 			{
 				var result:Boolean = true;
-				var dx:int = p_entity1.m_x - p_entity2.m_x;
-				if (dx > 0)
+				var dx:uint = Math.abs(p_entity1.m_x - p_entity2.m_x);
+				if (p_entity1.m_x > p_entity2.m_x)
 				{
-					for ( var i:uint = 1; i < dx; i++)
+					for ( var i:uint = 1; i < dx; ++i)
 					{
 						if ( _m_p_grid[p_entity2.m_x + i][p_entity2.m_y].Walkable != true)
 						{
@@ -449,7 +449,7 @@ package
 				}
 				else
 				{
-					for ( var i:uint = 1; i < dx; i++)
+					for ( var i:uint = 1; i < dx; ++i)
 					{
 						if ( _m_p_grid[p_entity1.m_x + i][p_entity1.m_y].Walkable != true)
 						{
