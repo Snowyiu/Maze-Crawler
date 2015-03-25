@@ -344,6 +344,11 @@ package
 		}
 		public function DistanceToPlayer(tile_x:int, tile_y:int):int
 		{
+			if (_m_p_player == null)
+			{
+				return int.MAX_VALUE;
+			}
+			
 			return new CPoint(_m_p_player.m_x, _m_p_player.m_y).DistanceTo(new CPoint(tile_x, tile_y));
 		}
 		
@@ -396,6 +401,67 @@ package
 			return GetWalkableTileCloseTo(_m_grid_width / 2, _m_grid_height / 2);
 		}
 		
+		public function HasLineOfSight(p_entity1:CEntity, p_entity2:CEntity):Boolean
+		{
+			//Cannot have line of sight if both axes are different
+			if (p_entity1.m_x != p_entity2.m_x && p_entity1.m_y != p_entity2.m_y)
+			{
+				return false;
+			}
+			if (p_entity1.m_y != p_entity2.m_y)
+			{
+				var result:Boolean = true;
+				var dy:int = p_entity1.m_y - p_entity2.m_y;
+				if (dy > 0)
+				{
+					for ( var i:uint = 1; i < dy; i++)
+					{
+						if ( _m_p_grid[p_entity2.m_x][p_entity2.m_y + i].Walkable != true)
+						{
+							return false;
+						}
+					}
+				}
+				else
+				{
+					for ( var i:uint = 1; i < dy; i++)
+					{
+						if ( _m_p_grid[p_entity1.m_x][p_entity1.m_y + i].Walkable != true)
+						{
+							return false;
+						}
+					}
+				}
+			}
+			else if (p_entity1.m_x != p_entity2.m_x)
+			{
+				var result:Boolean = true;
+				var dx:int = p_entity1.m_x - p_entity2.m_x;
+				if (dx > 0)
+				{
+					for ( var i:uint = 1; i < dx; i++)
+					{
+						if ( _m_p_grid[p_entity2.m_x + i][p_entity2.m_y].Walkable != true)
+						{
+							return false;
+						}
+					}
+				}
+				else
+				{
+					for ( var i:uint = 1; i < dx; i++)
+					{
+						if ( _m_p_grid[p_entity1.m_x + i][p_entity1.m_y].Walkable != true)
+						{
+							return false;
+						}
+					}
+				}
+			}
+			//Will immediately return true if both m_x and m_y are the same.
+			return true;
+		}
+		
 		public function GetWalkableTileCloseTo(tile_x:int, tile_y:int):CPoint
 		{
 			if (IsWalkable(tile_x, tile_y))
@@ -442,7 +508,7 @@ package
 		
 		public function DrawTo(p_bitmap_data:BitmapData):void
 		{
-			if (m_next_level && m_animation_time_left == -1)
+			if (m_next_level && m_animation_time_left == 1)
 			{
 				if (_m_p_next_level == null)
 				{

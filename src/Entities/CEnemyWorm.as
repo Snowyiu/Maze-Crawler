@@ -24,7 +24,7 @@ package Entities
 				return;
 			}
 			
-			if (m_p_level.DistanceToPlayer(m_x, m_y) < 5)
+			if (m_p_level.DistanceToPlayer(m_x, m_y) < 5 || m_p_level.HasLineOfSight(this, m_p_level.GetPlayer()))
 			{
 				_m_p_current_path = m_p_level.GetPath(new CPoint(m_x, m_y), m_p_level.GetPlayerPos());
 				if (_m_p_current_path.length > 2)

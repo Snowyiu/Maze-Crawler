@@ -1,0 +1,2 @@
+Worms walking several fields in one turn
+Sometimes animations freeze for a bit (potentially lag which cannot be fixed)
