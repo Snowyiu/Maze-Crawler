@@ -14,6 +14,9 @@ package
 		
 		private var _m_p_cached:BitmapData;
 		
+		public function get Bitmap():BitmapData { return _m_p_image; }
+		public function get MatrixTransformation():Matrix { return _m_p_matrix_transform; }
+		
 		public function get Width():int { return _m_p_size.X; }
 		public function get Height():int { return _m_p_size.Y; }
 		

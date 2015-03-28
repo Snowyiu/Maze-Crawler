@@ -21,6 +21,9 @@ package Animations
 		
 		private var _m_current_frame:int;
 		
+		private var _m_p_previous_matrix:Matrix;
+		private var _m_p_previous_bitmap:BitmapData;
+		
 		public function CSpriteSheetAnimation(p_img:CImage, p_sheet:BitmapData, ms_per_frame:int) 
 		{
 			_m_current_frame = 0;
@@ -28,19 +31,26 @@ package Animations
 			_m_cur_y = 0;
 			_m_p_image = p_img;
 			_m_p_sheet = p_sheet;
+			
+			_m_p_previous_matrix = _m_p_image.MatrixTransformation;
+			_m_p_previous_bitmap = _m_p_image.Bitmap;
+			
 			_m_p_image.SwitchImage(_m_p_sheet, false);
 			
 			_m_p_anim_timer = new Timer(ms_per_frame, 0);
 			_m_p_anim_timer.addEventListener(TimerEvent.TIMER, OnTimerTick);
 			
 			var num_ticks:int = (_m_p_sheet.width / _m_p_image.Width) * (_m_p_sheet.height / _m_p_image.Height);
-			_m_duration = Number(num_ticks) / (1000.0 / ms_per_frame) * CMain.frame_rate;
+			_m_duration = Number(num_ticks) / (1000.0 / ms_per_frame) * CMain.frame_rate + 4;
 		}
 		
 		private function OnTimerTick(p_event:TimerEvent):void 
 		{
 			if (!NextFrame())
 			{
+				_m_p_image.SwitchImage(_m_p_previous_bitmap, false);
+				_m_p_image.SwitchMatrix(_m_p_previous_matrix);
+				
 				_m_p_anim_timer.stop();
 				_m_p_anim_timer.removeEventListener(TimerEvent.TIMER, OnTimerTick);
 				_m_p_anim_timer = null;
@@ -83,6 +93,9 @@ package Animations
 		{
 			if (_m_p_anim_timer == null)
 				return;
+			
+			_m_p_image.SwitchImage(_m_p_previous_bitmap);
+			_m_p_image.SwitchMatrix(_m_p_previous_matrix);
 			
 			_m_p_anim_timer.stop();
 			_m_p_anim_timer.removeEventListener(TimerEvent.TIMER, OnTimerTick);
