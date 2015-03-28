@@ -45,7 +45,7 @@ package Screens
 			_m_p_level.MarkPath(new CPoint(tile_pos_x, tile_pos_y), _m_p_level.GetPlayerPos());
 		}
 		
-		public function StartLevel(p_level:CLevel)
+		public function StartLevel(p_level:CLevel):void
 		{
 			_m_p_level = p_level;
 			SetContent(_m_p_level);

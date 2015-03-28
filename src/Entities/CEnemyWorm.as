@@ -15,6 +15,13 @@ package Entities
 		public function CEnemyWorm(p_level:CLevel) 
 		{
 			super(p_level, 1);
+			m_p_image.SwitchImage(CResources.s_p_enemy_worm);
+		}
+		
+		protected override function OnDeath():void 
+		{
+			super.OnDeath();
+			m_p_image.SwitchImage(CResources.s_p_enemy_worm_dead);
 		}
 		
 		public override function DoTurn(turn_type:int):void 
@@ -71,15 +78,6 @@ package Entities
 					_m_p_current_path = null;
 				}
 			}
-		}
-		
-		public override function DrawAlive():BitmapData 
-		{
-			return CResources.s_p_opponent_worm;
-		}
-		public override function DrawDead():BitmapData 
-		{
-			return CResources.s_p_opponent_worm_dead;
 		}
 	}
 
