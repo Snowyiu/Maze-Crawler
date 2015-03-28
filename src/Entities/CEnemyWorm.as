@@ -1,5 +1,6 @@
 package Entities 
 {
+	import Animations.CSpriteSheetAnimation;
 	import flash.display.BitmapData;
 	/**
 	 * ...
@@ -77,6 +78,19 @@ package Entities
 				{
 					_m_p_current_path = null;
 				}
+			}
+		}
+		
+		protected override function MoveTo(relative_x:int, relative_y:int):Boolean 
+		{
+			if (super.MoveTo(relative_x, relative_y))
+			{
+				AddAnimation(new CSpriteSheetAnimation(m_p_image, CResources.s_p_enemy_worm_moving, 166));
+				return true;
+			}
+			else
+			{
+				return false;
 			}
 		}
 	}
