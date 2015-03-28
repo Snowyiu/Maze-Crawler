@@ -54,26 +54,6 @@ package Entities
 			if (m_health > m_max_health)
 				m_health = m_max_health;
 		}
-		
-		public function DrawAlive():BitmapData
-		{
-			return null;
-		}
-		public function DrawDead():BitmapData
-		{
-			return null;
-		}
-		public override function Draw():BitmapData 
-		{
-			if (IsAlive)
-			{
-				return DrawAlive();
-			}
-			else
-			{
-				return DrawDead();
-			}
-		}
 	}
 
 }

@@ -28,6 +28,8 @@ package
 	 */
 	public class CMain extends Sprite 
 	{
+		public static const frame_rate:int = 30;
+		
 		public static const visible_grid_width:int = 32;
 		public static const visible_grid_height:int = 20;
 		

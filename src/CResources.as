@@ -25,25 +25,25 @@ package
 		private static var _s_p_player_bitmap:Bitmap = new _s_p_player_class();
 		public static var s_p_player:BitmapData = _s_p_player_bitmap.bitmapData;
 		
-		[Embed(source = "../assets/player_x.png")]
-		private static var _s_p_player_x_class:Class;
-		private static var _s_p_player_x_bitmap:Bitmap = new _s_p_player_x_class();
-		public static var s_p_player_x:BitmapData = _s_p_player_x_bitmap.bitmapData;
+		[Embed(source = "../assets/player_dead.png")]
+		private static var _s_p_player_dead_class:Class;
+		private static var _s_p_player_dead_bitmap:Bitmap = new _s_p_player_dead_class();
+		public static var s_p_player_dead:BitmapData = _s_p_player_dead_bitmap.bitmapData;
 		
 		[Embed(source="../assets/wall.png")]
 		private static var _s_p_wall_class:Class;
 		private static var _s_p_wall_bitmap:Bitmap = new _s_p_wall_class();
 		public static var s_p_wall:BitmapData = _s_p_wall_bitmap.bitmapData;
 		
-		[Embed(source = "../assets/opponent_worm.png")]
-		private static var _s_p_opponent_worm_class:Class;
-		private static var _s_p_opponent_worm_bitmap:Bitmap = new _s_p_opponent_worm_class();
-		public static var s_p_opponent_worm:BitmapData = _s_p_opponent_worm_bitmap.bitmapData;
+		[Embed(source = "../assets/enemy_worm.png")]
+		private static var s_p_enemy_worm_class:Class;
+		private static var s_p_enemy_worm_bitmap:Bitmap = new s_p_enemy_worm_class();
+		public static var s_p_enemy_worm:BitmapData = s_p_enemy_worm_bitmap.bitmapData;
 	
-		[Embed(source = "../assets/opponent_worm_x.png")]
-		private static var _s_p_opponent_worm_x_class:Class;
-		private static var _s_p_opponent_worm_x_bitmap:Bitmap = new _s_p_opponent_worm_x_class();
-		public static var s_p_opponent_worm_dead:BitmapData = _s_p_opponent_worm_x_bitmap.bitmapData;
+		[Embed(source = "../assets/enemy_worm_dead.png")]
+		private static var _s_p_enemy_worm_dead_class:Class;
+		private static var _s_p_enemy_worm_dead_bitmap:Bitmap = new _s_p_enemy_worm_dead_class();
+		public static var s_p_enemy_worm_dead:BitmapData = _s_p_enemy_worm_dead_bitmap.bitmapData;
 		
 		[Embed(source = "../assets/heart_full.png")]
 		private static var _s_p_heart_full_class:Class;

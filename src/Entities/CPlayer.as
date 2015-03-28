@@ -17,11 +17,8 @@ package Entities
 				m_x = p_start_pos.X;
 				m_y = p_start_pos.Y;
 			}
-		}
-		
-		public override function Draw():BitmapData
-		{
-			return CResources.s_p_player;
+			
+			m_p_image.SwitchImage(CResources.s_p_player);
 		}
 		
 		public function SwitchLevel(p_new_level:CLevel):void

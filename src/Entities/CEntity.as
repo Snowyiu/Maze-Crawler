@@ -23,6 +23,8 @@ package Entities
 		
 		private var _m_p_animations:Vector.<IAnimation>;
 		
+		protected var m_p_image:CImage;
+		
 		public function CEntity(p_level:CLevel) 
 		{
 			_m_p_animations = new Vector.<IAnimation>();
@@ -30,6 +32,8 @@ package Entities
 			m_p_level = p_level;
 			if (p_level != null)
 				m_p_level.AddEntity(this);
+			
+			m_p_image = new CImage(new CPoint(1, 1), null, null);
 		}
 		
 		public function AddAnimation(p_anim:IAnimation)
@@ -62,7 +66,7 @@ package Entities
 		
 		public function Draw():BitmapData
 		{
-			return null;
+			return m_p_image.Get();
 		}
 		
 		public function MoveUp():void
